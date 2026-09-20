@@ -13,6 +13,7 @@
 
     <style>
         /* General Styling */
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
@@ -39,6 +40,7 @@
         }
 
         /* Navigation */
+
         .navbar {
             background-color: #0a0a0c !important;
             border-bottom: 1px solid #26262e;
@@ -59,16 +61,18 @@
         }
 
         /* Main Container */
+
         .content-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
         }
 
         /* Hero Section */
+
         #home {
             padding-top: 160px;
-            padding-bottom: 100px;
-            background-color: #0a0a0c;
+            padding-bottom: 110px;
+            background: linear-gradient(135deg, #0a0a0c, #10172a);
         }
 
         #home h1 {
@@ -83,8 +87,8 @@
         }
 
         #home img {
-            width: 210px;
-            height: 210px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #8d63d9;
@@ -98,6 +102,7 @@
             padding: 12px 22px;
             border-radius: 6px;
             margin-top: 15px;
+            border: none;
         }
 
         .button-purple:hover {
@@ -106,6 +111,7 @@
         }
 
         /* Sections */
+
         section {
             padding: 85px 20px;
             border-top: 1px solid #202027;
@@ -128,6 +134,7 @@
         }
 
         /* Toolkit */
+
         .toolkit-item {
             background-color: #121217;
             border: 1px solid #2c2c36;
@@ -142,22 +149,71 @@
             border-color: #8d63d9;
         }
 
-        /* Spotlight Cards */
-        .spotlight-card {
-            background-color: #121217;
-            border: 1px solid #2c2c36;
+        /* Spotlight Carousel */
+
+        .spotlight-container {
+            background: linear-gradient(135deg, #191923, #292936);
             border-radius: 8px;
-            padding: 25px;
-            height: 100%;
+            padding: 70px 90px 85px;
+            position: relative;
         }
 
-        .spotlight-card h3 {
-            color: #b18cff;
-            font-size: 20px;
-            margin-bottom: 15px;
+        .spotlight-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 70px;
+            min-height: 300px;
         }
 
-        /* Career/Education Timeline */
+        .spotlight-icon {
+            width: 270px;
+            height: 200px;
+            background-color: #102d26;
+            border: 4px solid #737982;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #bca2ff;
+            font-size: 52px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .spotlight-content {
+            text-align: left;
+            max-width: 450px;
+        }
+
+        .spotlight-content h3 {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .spotlight-content p {
+            color: #d0d0d8;
+            font-size: 17px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 8%;
+        }
+
+        .carousel-indicators {
+            bottom: 10px;
+        }
+
+        .carousel-indicators button {
+            width: 30px;
+            height: 3px;
+        }
+
+        /* Education Timeline */
+
         .timeline-item {
             border-left: 3px solid #8d63d9;
             padding-left: 25px;
@@ -174,7 +230,8 @@
             font-size: 14px;
         }
 
-        /* Projects */
+        /* Project Cards */
+
         .project-card {
             background-color: #121217;
             border: 1px solid #2c2c36;
@@ -189,6 +246,7 @@
         }
 
         /* Contact Form */
+
         .form-label {
             color: #eeeeee;
         }
@@ -212,13 +270,16 @@
         }
 
         /* Footer */
+
         footer {
             background-color: #060608;
             border-top: 1px solid #26262e;
         }
 
-        /* Mobile */
+        /* Mobile Design */
+
         @media (max-width: 768px) {
+
             #home {
                 text-align: center;
                 padding-top: 130px;
@@ -241,6 +302,34 @@
             .nav-link {
                 margin-left: 0;
             }
+
+            .spotlight-container {
+                padding: 40px 35px 70px;
+            }
+
+            .spotlight-slide {
+                flex-direction: column;
+                gap: 30px;
+                min-height: 420px;
+            }
+
+            .spotlight-icon {
+                width: 210px;
+                height: 150px;
+                font-size: 40px;
+            }
+
+            .spotlight-content {
+                text-align: center;
+            }
+
+            .spotlight-content h3 {
+                font-size: 26px;
+            }
+
+            .spotlight-content p {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -248,15 +337,18 @@
 <body>
 
     <!-- Navigation -->
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
             <div class="container">
 
                 <a class="navbar-brand" href="#home">
                     Ashley Nicole Cauman
                 </a>
 
-                <button class="navbar-toggler" type="button"
+                <button class="navbar-toggler"
+                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
                     aria-controls="navbarNav"
@@ -264,10 +356,16 @@
                     aria-label="Toggle navigation">
 
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
+
                     <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -294,15 +392,18 @@
                         </li>
 
                     </ul>
+
                 </div>
 
             </div>
+
         </nav>
     </header>
 
     <main>
 
-        <!-- Home -->
+        <!-- Home Section -->
+
         <section id="home">
 
             <div class="container content-container">
@@ -330,8 +431,8 @@
                             networking, and learning how different systems work.
                         </p>
 
-                        <a href="#contact" class="button-purple">
-                            Get in Touch
+                        <a href="#about" class="button-purple">
+                            More About Me
                         </a>
 
                     </div>
@@ -349,7 +450,8 @@
 
         </section>
 
-        <!-- About -->
+        <!-- About Section -->
+
         <section id="about">
 
             <div class="container content-container">
@@ -369,11 +471,18 @@
                     and gaining more experience through practice.
                 </p>
 
+                <p>
+                    My goal is to continue learning, gain experience,
+                    and become more confident in creating systems
+                    and websites.
+                </p>
+
             </div>
 
         </section>
 
-        <!-- Skills -->
+        <!-- Skills Section -->
+
         <section id="skills">
 
             <div class="container content-container">
@@ -402,57 +511,153 @@
 
         </section>
 
-        <!-- Interests -->
+        <!-- In the Spotlight Carousel -->
+
         <section id="spotlight">
 
             <div class="container content-container">
 
-                <h2>My Interests</h2>
+                <h2>In the Spotlight</h2>
 
-                <div class="row g-4">
+                <div id="spotlightCarousel"
+                    class="carousel slide spotlight-container"
+                    data-bs-ride="carousel">
 
-                    <div class="col-md-4">
+                    <!-- Carousel Content -->
 
-                        <div class="spotlight-card">
+                    <div class="carousel-inner">
 
-                            <h3>Web Development</h3>
+                        <!-- Slide 1 -->
 
-                            <p>
-                                Learning how to create and design
-                                websites using HTML, CSS, and Bootstrap.
-                            </p>
+                        <div class="carousel-item active">
+
+                            <div class="spotlight-slide">
+
+                                <div class="spotlight-icon">
+                                    &lt;/&gt;
+                                </div>
+
+                                <div class="spotlight-content">
+
+                                    <h3>Web Development</h3>
+
+                                    <p>
+                                        Learning how to create and design
+                                        websites using HTML, CSS, and Bootstrap.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 2 -->
+
+                        <div class="carousel-item">
+
+                            <div class="spotlight-slide">
+
+                                <div class="spotlight-icon">
+                                    C#
+                                </div>
+
+                                <div class="spotlight-content">
+
+                                    <h3>Programming</h3>
+
+                                    <p>
+                                        Practicing C# and Python while
+                                        improving my programming skills
+                                        through school activities.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Slide 3 -->
+
+                        <div class="carousel-item">
+
+                            <div class="spotlight-slide">
+
+                                <div class="spotlight-icon">
+                                    SAP
+                                </div>
+
+                                <div class="spotlight-content">
+
+                                    <h3>Information Systems</h3>
+
+                                    <p>
+                                        Learning how technology and business
+                                        processes work together in organizations.
+                                    </p>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                    <div class="col-md-4">
+                    <!-- Previous Button -->
 
-                        <div class="spotlight-card">
+                    <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#spotlightCarousel"
+                        data-bs-slide="prev">
 
-                            <h3>Programming</h3>
+                        <span class="carousel-control-prev-icon"></span>
 
-                            <p>
-                                Practicing C# and Python while improving
-                                my understanding of programming concepts.
-                            </p>
+                        <span class="visually-hidden">
+                            Previous
+                        </span>
 
-                        </div>
+                    </button>
 
-                    </div>
+                    <!-- Next Button -->
 
-                    <div class="col-md-4">
+                    <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#spotlightCarousel"
+                        data-bs-slide="next">
 
-                        <div class="spotlight-card">
+                        <span class="carousel-control-next-icon"></span>
 
-                            <h3>Information Systems</h3>
+                        <span class="visually-hidden">
+                            Next
+                        </span>
 
-                            <p>
-                                Learning how technology and business
-                                processes work together in organizations.
-                            </p>
+                    </button>
 
-                        </div>
+                    <!-- Carousel Indicators -->
+
+                    <div class="carousel-indicators">
+
+                        <button type="button"
+                            data-bs-target="#spotlightCarousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1">
+                        </button>
+
+                        <button type="button"
+                            data-bs-target="#spotlightCarousel"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2">
+                        </button>
+
+                        <button type="button"
+                            data-bs-target="#spotlightCarousel"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3">
+                        </button>
 
                     </div>
 
@@ -462,7 +667,8 @@
 
         </section>
 
-        <!-- Education -->
+        <!-- Education Section -->
+
         <section id="education">
 
             <div class="container content-container">
@@ -471,7 +677,9 @@
 
                 <div class="timeline-item">
 
-                    <h3>Bachelor of Science in Information Systems</h3>
+                    <h3>
+                        Bachelor of Science in Information Systems
+                    </h3>
 
                     <p class="date">
                         Currently Studying | Second Year
@@ -488,7 +696,8 @@
 
         </section>
 
-        <!-- Projects -->
+        <!-- Projects Section -->
+
         <section id="projects">
 
             <div class="container content-container">
@@ -516,8 +725,11 @@
                             </p>
 
                             <a href="https://github.com/ashleynicole-cauman/cauman-personal-portfolio"
-                                target="_blank">
+                                target="_blank"
+                                rel="noopener noreferrer">
+
                                 View Repository
+
                             </a>
 
                         </div>
@@ -538,8 +750,11 @@
                             </p>
 
                             <a href="https://github.com/ashleynicole-cauman"
-                                target="_blank">
+                                target="_blank"
+                                rel="noopener noreferrer">
+
                                 View GitHub Profile
+
                             </a>
 
                         </div>
@@ -552,7 +767,8 @@
 
         </section>
 
-        <!-- Contact -->
+        <!-- Contact Section -->
+
         <section id="contact">
 
             <div class="container content-container">
@@ -609,7 +825,7 @@
 
                             </div>
 
-                            <button type="submit" class="button-purple border-0">
+                            <button type="submit" class="button-purple">
                                 Send Message
                             </button>
 
@@ -627,8 +843,11 @@
                         </p>
 
                         <a href="https://github.com/ashleynicole-cauman"
-                            target="_blank">
+                            target="_blank"
+                            rel="noopener noreferrer">
+
                             Visit My GitHub
+
                         </a>
 
                     </div>
@@ -642,6 +861,7 @@
     </main>
 
     <!-- Footer -->
+
     <footer class="text-center py-4">
 
         <p class="mb-2">
@@ -649,8 +869,11 @@
         </p>
 
         <a href="https://github.com/ashleynicole-cauman"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
+
             GitHub
+
         </a>
 
     </footer>
