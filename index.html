@@ -19,20 +19,29 @@
         }
 
         body {
-            background-color: #0b0b0f;
-            color: #ffffff;
+            background-color: #0a0a0c;
+            color: #eeeeee;
             font-family: Arial, sans-serif;
         }
 
         p {
-            color: #b8b8c7;
+            color: #b5b5bd;
             line-height: 1.8;
         }
 
-        /* Navbar */
+        a {
+            color: #b18cff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #d0baff;
+        }
+
+        /* Navigation */
         .navbar {
-            background-color: #0b0b0f !important;
-            border-bottom: 1px solid #292936;
+            background-color: #0a0a0c !important;
+            border-bottom: 1px solid #26262e;
         }
 
         .navbar-brand {
@@ -41,172 +50,192 @@
         }
 
         .nav-link {
-            color: #b8b8c7 !important;
+            color: #b5b5bd !important;
             margin-left: 15px;
         }
 
         .nav-link:hover {
-            color: #9b6cff !important;
+            color: #b18cff !important;
+        }
+
+        /* Main Container */
+        .content-container {
+            max-width: 1000px;
+            margin: auto;
         }
 
         /* Hero Section */
         #home {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0b0b0f, #181126);
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background-color: #0a0a0c;
         }
 
         #home h1 {
             font-size: 48px;
             font-weight: bold;
-            margin-bottom: 20px;
+            color: #ffffff;
         }
 
-        #home .lead {
-            color: #a78bfa;
-            font-size: 24px;
+        #home .subtitle {
+            color: #b18cff;
+            font-size: 22px;
         }
 
         #home img {
-            width: 270px;
-            height: 270px;
+            width: 210px;
+            height: 210px;
             object-fit: cover;
-            border: 4px solid #8b5cf6;
-            padding: 6px;
+            border-radius: 50%;
+            border: 3px solid #8d63d9;
+            padding: 5px;
         }
 
-        .hero-text {
-            max-width: 650px;
+        .button-purple {
+            display: inline-block;
+            background-color: #8d63d9;
+            color: #ffffff;
+            padding: 12px 22px;
+            border-radius: 6px;
+            margin-top: 15px;
         }
 
-        /* Buttons */
-        .btn-primary {
-            background-color: #8b5cf6;
-            border-color: #8b5cf6;
-            padding: 12px 25px;
-        }
-
-        .btn-primary:hover {
-            background-color: #6d28d9;
-            border-color: #6d28d9;
+        .button-purple:hover {
+            background-color: #7048b8;
+            color: #ffffff;
         }
 
         /* Sections */
         section {
-            padding-top: 90px !important;
-            padding-bottom: 90px !important;
+            padding: 85px 20px;
+            border-top: 1px solid #202027;
         }
 
-        section.bg-light {
-            background-color: #111118 !important;
-        }
-
-        h2 {
+        section h2 {
             color: #ffffff;
+            font-size: 30px;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-        h2::after {
+        section h2::after {
             content: "";
             display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #8b5cf6;
+            width: 50px;
+            height: 3px;
+            background-color: #8d63d9;
             margin-top: 12px;
         }
 
-        /* About Section */
-        #about p {
-            max-width: 900px;
+        /* Toolkit */
+        .toolkit-item {
+            background-color: #121217;
+            border: 1px solid #2c2c36;
+            color: #d4c3ff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 5px;
         }
 
-        /* Skill Cards */
-        .card {
-            background-color: #181820;
-            border: 1px solid #30303d;
-            border-radius: 12px;
-            transition: 0.3s;
+        .toolkit-item:hover {
+            border-color: #8d63d9;
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #8b5cf6;
+        /* Spotlight Cards */
+        .spotlight-card {
+            background-color: #121217;
+            border: 1px solid #2c2c36;
+            border-radius: 8px;
+            padding: 25px;
+            height: 100%;
         }
 
-        .card-body {
-            padding: 30px 20px;
-        }
-
-        .card h3 {
-            color: #a78bfa;
+        .spotlight-card h3 {
+            color: #b18cff;
+            font-size: 20px;
             margin-bottom: 15px;
         }
 
-        /* Project Section */
-        .project-box {
-            background-color: #181820;
-            border: 1px solid #30303d;
-            border-radius: 12px;
-            padding: 30px;
+        /* Career/Education Timeline */
+        .timeline-item {
+            border-left: 3px solid #8d63d9;
+            padding-left: 25px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item h3 {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .timeline-item .date {
+            color: #b18cff;
+            font-size: 14px;
+        }
+
+        /* Projects */
+        .project-card {
+            background-color: #121217;
+            border: 1px solid #2c2c36;
+            border-radius: 8px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .project-card h3 {
+            color: #b18cff;
+            font-size: 20px;
         }
 
         /* Contact Form */
         .form-label {
-            color: #ffffff;
+            color: #eeeeee;
         }
 
         .form-control {
-            background-color: #181820;
-            border: 1px solid #383846;
+            background-color: #121217;
             color: #ffffff;
+            border: 1px solid #363640;
             padding: 12px;
         }
 
         .form-control:focus {
-            background-color: #181820;
+            background-color: #121217;
             color: #ffffff;
-            border-color: #8b5cf6;
-            box-shadow: 0 0 6px #8b5cf6;
+            border-color: #8d63d9;
+            box-shadow: 0 0 5px #8d63d9;
         }
 
         .form-control::placeholder {
-            color: #858594;
+            color: #777782;
         }
 
         /* Footer */
         footer {
-            background-color: #07070a !important;
-            border-top: 1px solid #292936;
+            background-color: #060608;
+            border-top: 1px solid #26262e;
         }
 
-        footer a {
-            color: #a78bfa !important;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #ffffff !important;
-        }
-
-        /* Mobile Design */
+        /* Mobile */
         @media (max-width: 768px) {
             #home {
                 text-align: center;
+                padding-top: 130px;
             }
 
             #home h1 {
-                font-size: 36px;
+                font-size: 35px;
             }
 
-            #home .lead {
-                font-size: 20px;
+            #home .subtitle {
+                font-size: 19px;
             }
 
             #home img {
-                width: 220px;
-                height: 220px;
+                width: 180px;
+                height: 180px;
+                margin-bottom: 30px;
             }
 
             .nav-link {
@@ -241,15 +270,19 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#spotlight">Interests</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
                         </li>
 
                         <li class="nav-item">
@@ -269,158 +302,158 @@
 
     <main>
 
-        <!-- Home Section -->
+        <!-- Home -->
         <section id="home">
 
-            <div class="container">
+            <div class="container content-container">
+
                 <div class="row align-items-center">
 
-                    <div class="col-md-5 text-center mb-5 mb-md-0">
+                    <div class="col-md-8">
 
-                        <img src="profile.jpg.jpeg"
-                            class="img-fluid rounded-circle"
-                            alt="Profile picture of Ashley Nicole Cauman">
-
-                    </div>
-
-                    <div class="col-md-7 hero-text">
-
-                        <p class="lead mb-2">Hello, I'm</p>
+                        <p class="subtitle">Hello, I'm</p>
 
                         <h1>Ashley Nicole Cauman</h1>
 
-                        <p class="lead">
-                            Bachelor of Science in Information Systems Student
+                        <p class="subtitle">
+                            Information Systems Student
                         </p>
 
                         <p>
-                            I am a second-year student at De La Salle-College
+                            I'm currently a second-year Bachelor of Science
+                            in Information Systems student at De La Salle-College
                             of Saint Benilde, DLS-CSB Antipolo Campus.
+                        </p>
+
+                        <p>
                             I am interested in technology, programming,
                             networking, and learning how different systems work.
                         </p>
 
-                        <a href="#about" class="btn btn-primary mt-3">
-                            More About Me
+                        <a href="#contact" class="button-purple">
+                            Get in Touch
                         </a>
 
                     </div>
 
+                    <div class="col-md-4 text-center mt-5 mt-md-0">
+
+                        <img src="profile.jpg.jpeg"
+                            alt="Profile picture of Ashley Nicole Cauman">
+
+                    </div>
+
                 </div>
-            </div>
-
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="bg-light">
-
-            <div class="container">
-
-                <h2>About Me</h2>
-
-                <p>
-                    I'm Ashley Nicole Cauman, currently studying Bachelor
-                    of Science in Information Systems at De La Salle-College
-                    of Saint Benilde.
-                </p>
-
-                <p>
-                    Through my classes, I've been learning about programming,
-                    web development, networking, and business processes.
-                    I'm still improving my skills, but I enjoy learning
-                    through school activities and projects.
-                </p>
-
-                <p>
-                    My goal is to continue gaining experience in technology
-                    and become more confident in creating systems and websites.
-                </p>
-
-                <span class="badge text-bg-primary me-2">
-                    BS Information Systems
-                </span>
-
-                <span class="badge text-bg-secondary">
-                    2nd Year Student
-                </span>
 
             </div>
 
         </section>
 
-        <!-- Skills Section -->
+        <!-- About -->
+        <section id="about">
+
+            <div class="container content-container">
+
+                <h2>Who I Am</h2>
+
+                <p>
+                    I'm Ashley Nicole Cauman, a student who is currently
+                    learning about information systems and different areas
+                    of technology.
+                </p>
+
+                <p>
+                    Through my school activities, I have been introduced
+                    to programming, web development, networking, and
+                    business processes. I am still improving my skills
+                    and gaining more experience through practice.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Skills -->
         <section id="skills">
 
-            <div class="container">
+            <div class="container content-container">
 
-                <h2>My Skills</h2>
+                <h2>My Toolkit</h2>
+
+                <p>
+                    These are some of the technologies and tools
+                    I am currently learning and practicing.
+                </p>
+
+                <div class="mt-4">
+
+                    <span class="toolkit-item">HTML</span>
+                    <span class="toolkit-item">CSS</span>
+                    <span class="toolkit-item">Bootstrap</span>
+                    <span class="toolkit-item">C#</span>
+                    <span class="toolkit-item">Python</span>
+                    <span class="toolkit-item">SAP</span>
+                    <span class="toolkit-item">Problem Solving</span>
+                    <span class="toolkit-item">Web Development</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Interests -->
+        <section id="spotlight">
+
+            <div class="container content-container">
+
+                <h2>My Interests</h2>
 
                 <div class="row g-4">
 
-                    <div class="col-6 col-md-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <h3 class="h5">HTML</h3>
-                                <p>
-                                    Creating the structure of web pages.
-                                </p>
-                            </div>
+                    <div class="col-md-4">
+
+                        <div class="spotlight-card">
+
+                            <h3>Web Development</h3>
+
+                            <p>
+                                Learning how to create and design
+                                websites using HTML, CSS, and Bootstrap.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="col-6 col-md-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <h3 class="h5">CSS</h3>
-                                <p>
-                                    Styling and improving website designs.
-                                </p>
-                            </div>
+                    <div class="col-md-4">
+
+                        <div class="spotlight-card">
+
+                            <h3>Programming</h3>
+
+                            <p>
+                                Practicing C# and Python while improving
+                                my understanding of programming concepts.
+                            </p>
+
                         </div>
+
                     </div>
 
-                    <div class="col-6 col-md-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <h3 class="h5">Bootstrap</h3>
-                                <p>
-                                    Creating responsive website layouts.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-md-4">
 
-                    <div class="col-6 col-md-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <h3 class="h5">C#</h3>
-                                <p>
-                                    Practicing programming and application development.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="spotlight-card">
 
-                    <div class="col-6 col-md-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <h3 class="h5">Python</h3>
-                                <p>
-                                    Learning programming and problem solving.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                            <h3>Information Systems</h3>
 
-                    <div class="col-6 col-md-4">
-                        <div class="card h-100 text-center">
-                            <div class="card-body">
-                                <h3 class="h5">SAP</h3>
-                                <p>
-                                    Learning the basics of business systems.
-                                </p>
-                            </div>
+                            <p>
+                                Learning how technology and business
+                                processes work together in organizations.
+                            </p>
+
                         </div>
+
                     </div>
 
                 </div>
@@ -429,28 +462,24 @@
 
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="bg-light">
+        <!-- Education -->
+        <section id="education">
 
-            <div class="container">
+            <div class="container content-container">
 
-                <h2>Projects and Accomplishments</h2>
+                <h2>My Education</h2>
 
-                <div class="project-box">
+                <div class="timeline-item">
 
-                    <h3 class="h5" style="color: #a78bfa;">
-                        School Activities and Learning
-                    </h3>
+                    <h3>Bachelor of Science in Information Systems</h3>
+
+                    <p class="date">
+                        Currently Studying | Second Year
+                    </p>
 
                     <p>
-                        I don't have completed personal projects to share yet.
-                        Most of the activities I have worked on so far are
-                        school-related exercises and assignments.
-                    </p>
-
-                    <p class="mb-0">
-                        I plan to add my future projects here as I continue
-                        learning and gaining experience.
+                        De La Salle-College of Saint Benilde,
+                        DLS-CSB Antipolo Campus.
                     </p>
 
                 </div>
@@ -459,20 +488,90 @@
 
         </section>
 
-        <!-- Contact Section -->
+        <!-- Projects -->
+        <section id="projects">
+
+            <div class="container content-container">
+
+                <h2>Stuff I've Worked On</h2>
+
+                <p>
+                    I am still building my experience through school
+                    activities, exercises, and assignments.
+                </p>
+
+                <div class="row g-4 mt-2">
+
+                    <div class="col-md-6">
+
+                        <div class="project-card">
+
+                            <h3>Personal Portfolio</h3>
+
+                            <p>
+                                A personal portfolio website created
+                                using HTML, CSS, and Bootstrap.
+                                This website presents my background,
+                                skills, and learning interests.
+                            </p>
+
+                            <a href="https://github.com/ashleynicole-cauman/cauman-personal-portfolio"
+                                target="_blank">
+                                View Repository
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="project-card">
+
+                            <h3>School Activities</h3>
+
+                            <p>
+                                Programming exercises and school
+                                assignments that help me practice
+                                coding and understand different
+                                technology concepts.
+                            </p>
+
+                            <a href="https://github.com/ashleynicole-cauman"
+                                target="_blank">
+                                View GitHub Profile
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
         <section id="contact">
 
-            <div class="container">
+            <div class="container content-container">
 
-                <h2>Contact Me</h2>
+                <h2>Let's Connect</h2>
 
-                <div class="row">
+                <p>
+                    If you have a question or would like to get in touch,
+                    you can use the form below.
+                </p>
+
+                <div class="row mt-4">
 
                     <div class="col-md-7">
 
                         <form>
 
                             <div class="mb-3">
+
                                 <label for="name" class="form-label">
                                     Name
                                 </label>
@@ -481,9 +580,11 @@
                                     class="form-control"
                                     id="name"
                                     placeholder="Enter your name">
+
                             </div>
 
                             <div class="mb-3">
+
                                 <label for="email" class="form-label">
                                     Email
                                 </label>
@@ -492,9 +593,11 @@
                                     class="form-control"
                                     id="email"
                                     placeholder="Enter your email">
+
                             </div>
 
                             <div class="mb-3">
+
                                 <label for="message" class="form-label">
                                     Message
                                 </label>
@@ -503,9 +606,10 @@
                                     id="message"
                                     rows="5"
                                     placeholder="Write your message"></textarea>
+
                             </div>
 
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="button-purple border-0">
                                 Send Message
                             </button>
 
@@ -515,17 +619,15 @@
 
                     <div class="col-md-5 mt-5 mt-md-0">
 
-                        <h3 class="h5">Get in Touch</h3>
+                        <h3>GitHub</h3>
 
                         <p>
-                            Thank you for visiting my portfolio.
-                            You can check my GitHub profile to see
-                            my school activities and coding exercises.
+                            You can visit my GitHub profile to see
+                            my coding exercises and school activities.
                         </p>
 
                         <a href="https://github.com/ashleynicole-cauman"
-                            target="_blank"
-                            class="btn btn-outline-light">
+                            target="_blank">
                             Visit My GitHub
                         </a>
 
@@ -540,10 +642,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-white text-center py-4">
+    <footer class="text-center py-4">
 
         <p class="mb-2">
-            © 2026 Ashley Nicole Cauman
+            © 2026 Ashley Nicole Cauman. All rights reserved.
         </p>
 
         <a href="https://github.com/ashleynicole-cauman"
