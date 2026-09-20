@@ -1,260 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ashley Nicole Cauman | Portfolio</title>
+
     <!-- Bootstrap CSS -->
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background-color: #0b0b0f;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            color: #b8b8c7;
+            line-height: 1.8;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #0b0b0f !important;
+            border-bottom: 1px solid #292936;
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #b8b8c7 !important;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover {
+            color: #9b6cff !important;
+        }
+
+        /* Hero Section */
+        #home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0b0b0f, #181126);
+        }
+
+        #home h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #home .lead {
+            color: #a78bfa;
+            font-size: 24px;
+        }
+
+        #home img {
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+            border: 4px solid #8b5cf6;
+            padding: 6px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #8b5cf6;
+            border-color: #8b5cf6;
+            padding: 12px 25px;
+        }
+
+        .btn-primary:hover {
+            background-color: #6d28d9;
+            border-color: #6d28d9;
+        }
+
+        /* Sections */
+        section {
+            padding-top: 90px !important;
+            padding-bottom: 90px !important;
+        }
+
+        section.bg-light {
+            background-color: #111118 !important;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #8b5cf6;
+            margin-top: 12px;
+        }
+
+        /* About Section */
+        #about p {
+            max-width: 900px;
+        }
+
+        /* Skill Cards */
+        .card {
+            background-color: #181820;
+            border: 1px solid #30303d;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #8b5cf6;
+        }
+
+        .card-body {
+            padding: 30px 20px;
+        }
+
+        .card h3 {
+            color: #a78bfa;
+            margin-bottom: 15px;
+        }
+
+        /* Project Section */
+        .project-box {
+            background-color: #181820;
+            border: 1px solid #30303d;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        /* Contact Form */
+        .form-label {
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #181820;
+            border: 1px solid #383846;
+            color: #ffffff;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background-color: #181820;
+            color: #ffffff;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 6px #8b5cf6;
+        }
+
+        .form-control::placeholder {
+            color: #858594;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #07070a !important;
+            border-top: 1px solid #292936;
+        }
+
+        footer a {
+            color: #a78bfa !important;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff !important;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 768px) {
+            #home {
+                text-align: center;
+            }
+
+            #home h1 {
+                font-size: 36px;
+            }
+
+            #home .lead {
+                font-size: 20px;
+            }
+
+            #home img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .nav-link {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
     <!-- Navigation -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
 
                 <a class="navbar-brand" href="#home">
                     Ashley Nicole Cauman
                 </a>
+
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
                         </li>
+
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
+
     <main>
-        <!-- Home / Introduction -->
-        <section id="home" class="py-5">
+
+        <!-- Home Section -->
+        <section id="home">
+
             <div class="container">
                 <div class="row align-items-center">
 
-                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="col-md-5 text-center mb-5 mb-md-0">
+
                         <img src="profile.jpg.jpeg"
-                             class="img-fluid rounded-circle"
-                             alt="Profile picture of Ashley Nicole Cauman">
+                            class="img-fluid rounded-circle"
+                            alt="Profile picture of Ashley Nicole Cauman">
+
                     </div>
-                    <div class="col-md-8">
-                        <h1>Hi, I'm Ashley Nicole Cauman!</h1>
+
+                    <div class="col-md-7 hero-text">
+
+                        <p class="lead mb-2">Hello, I'm</p>
+
+                        <h1>Ashley Nicole Cauman</h1>
 
                         <p class="lead">
-                            Welcome to my personal portfolio.
+                            Bachelor of Science in Information Systems Student
                         </p>
-                       <p>
-                           I am currently a student at De La Salle-College of Saint Benilde
-                           taking up Bachelor of Science in Information Systems. I am
-                           interested in technology, programming, networking, and learning
-                           how different systems work. I am still developing my skills,
-                           but I enjoy learning through our school activities and projects.
-                       </p>
 
-                       <span class="badge text-bg-primary">BS Information Systems</span>
-                       <span class="badge text-bg-secondary">DLS-CSB Antipolo Campus 2nd year Student</span>
+                        <p>
+                            I am a second-year student at De La Salle-College
+                            of Saint Benilde, DLS-CSB Antipolo Campus.
+                            I am interested in technology, programming,
+                            networking, and learning how different systems work.
+                        </p>
+
+                        <a href="#about" class="btn btn-primary mt-3">
+                            More About Me
+                        </a>
+
                     </div>
 
                 </div>
             </div>
+
         </section>
-        <!-- About Me -->
-        <section id="about" class="py-5 bg-light">
+
+        <!-- About Section -->
+        <section id="about" class="bg-light">
+
             <div class="container">
 
-                <h2 class="mb-3">About Me</h2>
-               <p>
-                   I'm Ashley Nicole Cauman, currently studying Bachelor of Science
-                   in Information Systems at De La Salle-College of Saint Benilde.
-                   Through my classes, I've been learning about programming,
-                   web development, networking, and business process.
-               </p>
+                <h2>About Me</h2>
 
-               <p>
-                   I'm still learning and gaining experience, especially when it
-                   comes to coding and creating websites. I enjoy trying out
-                   different tools and improving my skills through the activities
-                   and projects I work on in school.
-               </p>
-
-            </div>
-        </section>
-       <!-- Skills -->
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="mb-4">My Skills</h2>
-
-        <div class="row g-4">
-
-            <div class="col-6 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">HTML</h3>
-                        <p class="mb-0">
-                            Creating the structure of web pages.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">CSS</h3>
-                        <p class="mb-0">
-                            Styling and improving the appearance of websites.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">Bootstrap</h3>
-                        <p class="mb-0">
-                            Using Bootstrap to create responsive web pages.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">C#</h3>
-                        <p class="mb-0">
-                            Practicing programming and basic application development.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">Python</h3>
-                        <p class="mb-0">
-                            Learning Python for programming and problem solving.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">SAP</h3>
-                        <p class="mb-0">
-                            Learning the basics of SAP and business systems.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-     <!-- Projects -->
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-
-        <h2 class="mb-4">Projects and Accomplishments</h2>
-
-        <p>
-            I don't have any completed personal projects to share yet.
-            Most of the projects I have worked on so far are school activities,
-            and I am still building my experience and skills.
-        </p>
-
-        <p class="mb-0">
-            I plan to add my future projects here as I continue learning.
-        </p>
-
-    </div>
-</section>
-       <!-- Contact -->
-<section id="contact" class="py-5">
-    <div class="container">
-        <h2 class="mb-4">Contact Me</h2>
-        <div class="row">
-            <div class="col-md-7">
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">
-                            Name
-                        </label>
-                        <input type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="Enter your name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">
-                            Email
-                        </label>
-                        <input type="email"
-                            class="form-control"
-                            id="email"
-                            placeholder="Enter your email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">
-                            Message
-                        </label>
-                        <textarea class="form-control"
-                            id="message"
-                            rows="4"
-                            placeholder="Write your message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-            <div class="col-md-5 mt-4 mt-md-0">
-                <h3 class="h5">Get in Touch</h3>
                 <p>
-                    If you want to contact me, you can send a message
-                    using the form on this page.
+                    I'm Ashley Nicole Cauman, currently studying Bachelor
+                    of Science in Information Systems at De La Salle-College
+                    of Saint Benilde.
                 </p>
+
+                <p>
+                    Through my classes, I've been learning about programming,
+                    web development, networking, and business processes.
+                    I'm still improving my skills, but I enjoy learning
+                    through school activities and projects.
+                </p>
+
+                <p>
+                    My goal is to continue gaining experience in technology
+                    and become more confident in creating systems and websites.
+                </p>
+
+                <span class="badge text-bg-primary me-2">
+                    BS Information Systems
+                </span>
+
+                <span class="badge text-bg-secondary">
+                    2nd Year Student
+                </span>
+
             </div>
-        </div>
-    </div>
-</section>
+
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+
+            <div class="container">
+
+                <h2>My Skills</h2>
+
+                <div class="row g-4">
+
+                    <div class="col-6 col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5">HTML</h3>
+                                <p>
+                                    Creating the structure of web pages.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5">CSS</h3>
+                                <p>
+                                    Styling and improving website designs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5">Bootstrap</h3>
+                                <p>
+                                    Creating responsive website layouts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5">C#</h3>
+                                <p>
+                                    Practicing programming and application development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5">Python</h3>
+                                <p>
+                                    Learning programming and problem solving.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5">SAP</h3>
+                                <p>
+                                    Learning the basics of business systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-light">
+
+            <div class="container">
+
+                <h2>Projects and Accomplishments</h2>
+
+                <div class="project-box">
+
+                    <h3 class="h5" style="color: #a78bfa;">
+                        School Activities and Learning
+                    </h3>
+
+                    <p>
+                        I don't have completed personal projects to share yet.
+                        Most of the activities I have worked on so far are
+                        school-related exercises and assignments.
+                    </p>
+
+                    <p class="mb-0">
+                        I plan to add my future projects here as I continue
+                        learning and gaining experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+
+            <div class="container">
+
+                <h2>Contact Me</h2>
+
+                <div class="row">
+
+                    <div class="col-md-7">
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Name
+                                </label>
+
+                                <input type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="Enter your name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email
+                                </label>
+
+                                <input type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="Enter your email">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">
+                                    Message
+                                </label>
+
+                                <textarea class="form-control"
+                                    id="message"
+                                    rows="5"
+                                    placeholder="Write your message"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-md-5 mt-5 mt-md-0">
+
+                        <h3 class="h5">Get in Touch</h3>
+
+                        <p>
+                            Thank you for visiting my portfolio.
+                            You can check my GitHub profile to see
+                            my school activities and coding exercises.
+                        </p>
+
+                        <a href="https://github.com/ashleynicole-cauman"
+                            target="_blank"
+                            class="btn btn-outline-light">
+                            Visit My GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
     <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
+    <footer class="text-white text-center py-4">
 
-    <p class="mb-2">
-        © 2026 Ashley Nicole Cauman
-    </p>
+        <p class="mb-2">
+            © 2026 Ashley Nicole Cauman
+        </p>
 
-    <a href="https://github.com/ashleynicole-cauman"
-        target="_blank"
-        class="text-white">
-        GitHub
-    </a>
+        <a href="https://github.com/ashleynicole-cauman"
+            target="_blank">
+            GitHub
+        </a>
 
-</footer>
-   <!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
 </html>
